@@ -81,7 +81,7 @@ class Acker {
 
     /**
 	 * set the percentage to log by
-     * @param perc
+     * @param {Number} perc
      */
 	set logByPercentage (perc) {
         // todo validate
@@ -89,11 +89,27 @@ class Acker {
 	}
 
     /**
+     * get the percentage to log by
+	 * @return {Number} percentage
+     */
+    get logByPercentage () {
+        _perc.get(this);
+    }
+
+    /**
 	 * set the template message
-     * @param message
+     * @param {String} message
      */
 	set message (message) {
 		_msg.set(this, message);
+	}
+
+    /**
+	 * get the message template
+     * @returns {String}
+     */
+	get message () {
+		return _msg.get(this);
 	}
 
     /**
@@ -114,6 +130,22 @@ class Acker {
     get total () {
         return _total.get(this);
     }
+
+    /**
+	 * get logger
+     * @returns {Function}
+     */
+    get logger () {
+    	return _logger.get(this);
+	}
+
+    /**
+	 * set the logger
+     * @param {Function} logger
+     */
+	set logger (logger) {
+    	_logger.set(this, logger);
+	}
 
     /**
      * get progress as a raw number
