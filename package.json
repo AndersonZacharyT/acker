@@ -1,0 +1,9 @@
+{
+  "name": "acker",
+  "version": "1.2.1",
+  "description": "Acknowledge progress of long running jobs through logging",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Zachary Anderson (AndersonZacharyT@gmail.com)",
+  "license": "ISC"
+}
