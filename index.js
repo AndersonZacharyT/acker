@@ -102,6 +102,7 @@ class Acker {
      */
 	set message (message) {
 		_msg.set(this, message);
+		this._buildLogArr();
 	}
 
     /**
