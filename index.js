@@ -68,9 +68,9 @@ class Acker {
      */
 	_buildLogArr () {
 		let arr = [];
-		let index = 1;
+		let index = 0;
 		let pct = _perc.get(this);
-		while (index++ * pct < 100) {
+		while (++index * pct < 100) {
 			arr.push(index * pct);
 		}
 		arr.push(100);
