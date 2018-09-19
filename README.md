@@ -1,17 +1,17 @@
 # acker
-ack and log long-running job progress
+Acker is a utility used to log the progress of long-running jobs of finite length
 
 ## usage
 
 ```
 const Acker = require('acker');
 
-let acker = new Acker();
+const acker = new Acker();
 acker.total = 100; // need to do 100 things
 
 acker.ack(); // ONE thing done
 acker.ack(10) // chunk of 10 done
--> `----- 11% done! -----`
+-> `----- 11% done! -----` // logged
 
 acker.message = 'We are PCT done, INCR if you care' // optional - PCT will become `x%`, INCR will become `x of y`
 acker.ack(70);
